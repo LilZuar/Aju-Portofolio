@@ -13,7 +13,7 @@ const handleSubmit = async (e: Event) => {
 
   try {
     const serviceID = 'service_fxwwz2g'; // Replace with your EmailJS service ID
-    const templateID = 'template_9201qsm'; // Replace with your EmailJS template ID
+    const templateID = 'template_3hysv9j'; // Replace with your EmailJS template ID
     const publicKey = 'K78H7lM7IV1u_LsGA'; // Replace with your EmailJS user ID
 
     // Send email using EmailJS
