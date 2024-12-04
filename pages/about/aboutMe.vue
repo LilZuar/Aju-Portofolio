@@ -119,8 +119,7 @@
             Let's work together
           </h2>
           <p class="mt-10 text-lg leading-7 text-zinc-800">
-            This is a template Figma file, turned into code using Anima. Learn
-            more at AnimaApp.com
+            Hopefully we could work together in the future. If you have any question or want to discuss about project, feel free to contact me.
           </p>
         </div>
         <ContactForm />
