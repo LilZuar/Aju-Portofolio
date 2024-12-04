@@ -10,6 +10,7 @@ export interface ClientReview {
     title: string;
     subtitle: string;
     image: string;
+    description: string;
   }
   
   export interface ServiceItem {

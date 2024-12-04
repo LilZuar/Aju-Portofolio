@@ -8,17 +8,17 @@ const services: ServiceItem[] = [
   {
     title: "IOS Developer",
     description: "Gained 10 months of hands-on experience as a Junior Developer at Apple Developer Academy @BINUS, specializing in building innovative iOS applications.",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/29035a12d19ce551313455fb3b06b36417e65bdc59ec8a63d789e58f53f84e4f?placeholderIfAbsent=true&apiKey=c98405aca0e946b081c117f512b77e1e"
+    icon: "swiftLogo.png"
   },
   {
     title: "Software Developer",
     description: "Currently pursuing a Bachelor's degree in Computer Science at BINUS University Alam Sutera, focusing on mastering software engineering principles and practices.",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/06a15c0b0ec222c135d8f7614bae019ebf26e1e9e3f4514124b2b51d653729a8?placeholderIfAbsent=true&apiKey=c98405aca0e946b081c117f512b77e1e"
+    icon: "htmlLogo.png"
   },
   {
     title: "Mobile Programmer",
     description: "Experienced in developing robust mobile applications using the Flutter framework and Dart language, ensuring high performance and cross-platform compatibility.",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/944c8c9a54b858bce14c7d7c17ee9d98d05f54f422a60c0677a46e4a27a6069b?placeholderIfAbsent=true&apiKey=c98405aca0e946b081c117f512b77e1e"
+    icon: "flutterLogo.svg"
   }
 ]
 
@@ -26,17 +26,20 @@ const workItems: WorkItem[] = [
   {
     title: "Check Mate",
     subtitle: "IOS app for daily reminder",
-    image: "CheckMate.png"
+    image: "CheckMate.png",
+    description: ""
   },
   {
     title: "Day Out",
     subtitle: "IOS app to check weather for outdoor family activity",
-    image: "DayOut.png"
+    image: "DayOut.png",
+    description: ""
   },
   {
     title: "Sing Eling",
     subtitle: "IOS Games that help you to learn Javanese",
-    image: "SingEling.png"
+    image: "SingEling.png",
+    description: ""
   },
   // ... rest of work items
 ]
@@ -63,7 +66,7 @@ const reviews: ClientReview[] = [
       <div class="flex flex-wrap gap-24 items-start max-md:max-w-full">
         <div v-for="service in services" :key="service.title" class="flex flex-col items-center min-w-[280px] w-[320px]">
           <img 
-            :src="service.icon" 
+            :src="'/images/' + service.icon" 
             :alt="service.title" 
             loading="lazy" 
             class="object-contain max-w-full aspect-square w-[160px]" 
@@ -82,18 +85,25 @@ const reviews: ClientReview[] = [
       <h2 class="text-3xl font-semibold leading-none text-center mb-10">My Latest Work</h2>
       <!-- Work items grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 w-full">
-        <div v-for="work in workItems" :key="work.title" class="flex flex-col items-center">
+        <NuxtLink 
+          v-for="work in workItems" 
+          :key="work.title" 
+          :to="`/work/${work.title.replace(/\s+/g, '-').toLowerCase()}`"
+          class="flex flex-col items-center"
+        >
           <img :src="'/images/' + work.image" :alt="work.title" class="w-[450px] h-[150px] object-cover mb-4 rounded-lg shadow-md" />
           <h3 class="text-xl font-semibold">{{ work.title }}</h3>
           <p class="text-lg text-zinc-600">{{ work.subtitle }}</p>
-        </div>
+        </NuxtLink>
       </div>
     </section>
 
 
 
+
+
     <!-- Contact Section -->
-    <section id="contact" class="flex flex-col items-center px-24 pb-16 w-full bg-white max-md:px-5 max-md:max-w-full">
+    <section id="contact" class="flex flex-col items-center px-24 mt-20 pb-16 w-full bg-white max-md:px-5 max-md:max-w-full">
       <div class="flex flex-col items-center pt-16 border-t-2 border-black border-opacity-20 max-md:max-w-full">
         <div class="flex flex-wrap gap-10 items-start max-md:max-w-full">
           <div class="flex flex-col min-w-[240px] w-[360px]">
