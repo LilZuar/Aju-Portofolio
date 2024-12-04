@@ -9,7 +9,7 @@
   </p>
   <a 
     href="/resume/Lazuardhi_Ahfar_Resume.pdf" 
-    download="Lazuardhi_Imani_Ahfar.pdf"
+    download="Lazuardhi_Imani_Ahfar_Resume.pdf"
     class="inline-block mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 transition-all"
   >
     Download My CV
