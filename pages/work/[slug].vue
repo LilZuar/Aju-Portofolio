@@ -45,22 +45,17 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import { useAsyncData } from 'nuxt/app';
+import data from '@/data/data';
 
 const route = useRoute();
 
 // Fetch data asynchronously
 const { data: work, error } = await useAsyncData('work', () => {
-  const workItems = [
-    { title: "Check Mate", subtitle: "IOS app for daily reminder", image: "CheckMate.png", description: "CheckMate is a location-based and time-based reminder app designed to help users keep track of important items. It’s particularly useful for individuals who frequently forget essential belongings when leaving specific locations. CheckMate leverages location detection to trigger reminders if a user exits a designated area without a specified item. Additionally, users can set reminders based on time, receiving notifications when scheduled." },
-    { title: "Day Out", subtitle: "IOS app to check weather for outdoor family activity", image: "DayOut.png" },
-    { title: "Sing Eling", subtitle: "IOS Games that help you to learn Javanese", image: "SingEling.png" },
-  ];
-
   const slug = route.params.slug.replace(/-/g, ' ').trim().toLowerCase();
 
   console.log("Transformed Slug:", slug);
 
-  const work = workItems.find(item => item.title.trim().toLowerCase() === slug);
+  const work = data.workItems.find(item => item.title.trim().toLowerCase() === slug);
 
   console.log("Matched Work:", work);
 

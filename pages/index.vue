@@ -2,58 +2,11 @@
 // import Header from './components/Header.vue'
 // import Hero from './components/Hero.vue'
 // import ContactForm from './components/ContactForm.vue'
-import type { ClientReview, WorkItem, ServiceItem } from '../types'
+import data from '@/data/data'
 
-const services: ServiceItem[] = [
-  {
-    title: "IOS Developer",
-    description: "Gained 10 months of hands-on experience as a Junior Developer at Apple Developer Academy @BINUS, specializing in building innovative iOS applications.",
-    icon: "swiftLogo.png"
-  },
-  {
-    title: "Software Developer",
-    description: "Currently pursuing a Bachelor's degree in Computer Science at BINUS University Alam Sutera, focusing on mastering software engineering principles and practices.",
-    icon: "htmlLogo.png"
-  },
-  {
-    title: "Mobile Programmer",
-    description: "Experienced in developing robust mobile applications using the Flutter framework and Dart language, ensuring high performance and cross-platform compatibility.",
-    icon: "flutterLogo.svg"
-  }
-]
+const workItems = data.workItems;
+const services = data.services;
 
-const workItems: WorkItem[] = [
-  {
-    title: "Check Mate",
-    subtitle: "IOS app for daily reminder",
-    image: "CheckMate.png",
-    description: ""
-  },
-  {
-    title: "Day Out",
-    subtitle: "IOS app to check weather for outdoor family activity",
-    image: "DayOut.png",
-    description: ""
-  },
-  {
-    title: "Sing Eling",
-    subtitle: "IOS Games that help you to learn Javanese",
-    image: "SingEling.png",
-    description: ""
-  },
-  // ... rest of work items
-]
-
-const reviews: ClientReview[] = [
-  {
-    text: "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-    image: "https://cdn.builder.io/api/v1/image/assets/TEMP/bc73f87370d6d1d28cf54b4d76964fdb58cecda6657c21328bd296d6b3a5e4af?placeholderIfAbsent=true&apiKey=c98405aca0e946b081c117f512b77e1e",
-    name: "Gemma Nolen",
-    company: "Google",
-    stars: 5
-  },
-  // ... rest of reviews
-]
 </script>
 
 <template>
