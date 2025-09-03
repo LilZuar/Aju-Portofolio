@@ -1,11 +1,9 @@
 <!-- components/Footer.vue -->
 <script setup lang="ts">
 const socials = [
-  { name: 'GitHub', icon: 'mdi:github', url: 'https://github.com/yourusername' },
-  { name: 'LinkedIn', icon: 'mdi:linkedin', url: 'https://linkedin.com/in/yourusername' },
-  { name: 'Twitter', icon: 'mdi:twitter', url: 'https://twitter.com/yourusername' },
-  { name: 'Instagram', icon: 'mdi:instagram', url: 'https://instagram.com/yourusername' },
-  { name: 'Facebook', icon: 'mdi:facebook', url: 'https://facebook.com/yourusername' },
+  { name: 'GitHub', icon: 'mdi:github', url: 'https://github.com/LilZuar' },
+  { name: 'LinkedIn', icon: 'mdi:linkedin', url: 'www.linkedin.com/in/lazuardhii' },
+  { name: 'Instagram', icon: 'mdi:instagram', url: 'https://www.instagram.com/azuar.afr/' },
 ]
 </script>
 
