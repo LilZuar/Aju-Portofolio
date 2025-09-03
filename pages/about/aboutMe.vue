@@ -96,7 +96,7 @@
         <ul class="list-disc list-inside text-zinc-600">
           <li>
             <strong>Bachelor's Degree in Computer Science</strong> <br />
-            BINUS University (2020 - Present) <br />
+            BINUS University (2020 - 2025) <br />
             Courses: Software Engineering, Mobile App Development, and Web
             Development.
           </li>
