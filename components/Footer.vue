@@ -2,7 +2,7 @@
 <script setup lang="ts">
 const socials = [
   { name: 'GitHub', icon: 'mdi:github', url: 'https://github.com/LilZuar' },
-  { name: 'LinkedIn', icon: 'mdi:linkedin', url: 'www.linkedin.com/in/lazuardhii' },
+  { name: 'LinkedIn', icon: 'mdi:linkedin', url: 'https://www.linkedin.com/in/lazuardhii/' },
   { name: 'Instagram', icon: 'mdi:instagram', url: 'https://www.instagram.com/azuar.afr/' },
 ]
 </script>
