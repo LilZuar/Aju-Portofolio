@@ -45,7 +45,7 @@ const services = data.services
       <h2 class="text-4xl font-bold text-center mb-16">My Latest Work</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         <NuxtLink
-          v-for="work in workItems"
+          v-for="work in workItems.slice(0, 3)"
           :key="work.title"
           :to="`/work/${work.title.replace(/\s+/g, '-').toLowerCase()}`"
           class="flex flex-col bg-white rounded-xl shadow-md hover:shadow-xl overflow-hidden transition duration-300"
