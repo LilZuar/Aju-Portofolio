@@ -13,7 +13,7 @@
         If you want to see a summarized version of me, you can check it here.
       </p>
       <a
-        href="/resume/Lazuardhi_Ahfar_Resume.pdf"
+        href="/resume/CV.pdf"
         download="Lazuardhi_Imani_Ahfar_Resume.pdf"
         class="inline-block mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 transition-all"
       >
@@ -33,24 +33,41 @@
         </p>
       </div>
 
-      <!-- Skills Section -->
-      <div class="text-lg leading-relaxed">
-        <h2 class="text-2xl font-semibold mb-4 text-zinc-800">Skills</h2>
-        <ul class="list-disc list-inside text-zinc-600">
-          <li>Proficient in Swift for iOS development.</li>
-          <li>
-            Experienced with Vue.js, Nuxt.js, and Laravel for building dynamic
-            web applications.
-          </li>
-          <li>
-            Experienced with Flutter and Dart language for developing mobile
-            apps.
-          </li>
-          <li>
-            Ability to integrate APIs and manage data using modern libraries.
-          </li>
-        </ul>
-      </div>
+     <!-- Skills Section -->
+    <div class="text-lg leading-relaxed">
+      <h2 class="text-2xl font-semibold mb-4 text-zinc-800">Skills</h2>
+
+      <!-- Programming Languages -->
+      <h3 class="text-xl font-semibold mt-6 mb-2 text-zinc-700">Programming Languages</h3>
+      <ul class="list-disc list-inside text-zinc-600">
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>Swift</li>
+        <li>Dart</li>
+        <li>SQL</li>
+      </ul>
+
+      <!-- Frameworks & Tools -->
+      <h3 class="text-xl font-semibold mt-6 mb-2 text-zinc-700">Frameworks & Tools</h3>
+      <ul class="list-disc list-inside text-zinc-600">
+        <li>Flutter Framework</li>
+        <li>Laravel Framework</li>
+      </ul>
+
+      <!-- Technical Skills -->
+      <h3 class="text-xl font-semibold mt-6 mb-2 text-zinc-700">Technical Skills</h3>
+      <ul class="list-disc list-inside text-zinc-600">
+        <li>API Integration</li>
+      </ul>
+
+      <!-- Soft Skills -->
+      <h3 class="text-xl font-semibold mt-6 mb-2 text-zinc-700">Soft Skills</h3>
+      <ul class="list-disc list-inside text-zinc-600">
+        <li>Team Collaboration</li>
+        <li>Public Speaking</li>
+      </ul>
+    </div>
+
 
       <!-- Experience Section -->
       <div class="text-lg leading-relaxed">
