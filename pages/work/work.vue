@@ -29,6 +29,21 @@
           </NuxtLink>
         </div>
       </main>
+      <!-- Contact Section -->
+        <section id="contact" class="w-full bg-white py-24 px-6 md:px-16 lg:px-32">
+        <div class="max-w-5xl mx-auto border-t border-zinc-200 pt-16 flex flex-col lg:flex-row gap-12">
+            <div class="flex-1">
+            <h2 class="text-4xl font-bold text-zinc-800">Let's work together</h2>
+            <p class="mt-6 text-lg text-zinc-600 leading-relaxed">
+                I’d love to collaborate on your next project. If you have questions or ideas,
+                feel free to reach out through the form.
+            </p>
+            </div>
+            <div class="flex-1">
+            <ContactForm />
+            </div>
+        </div>
+        </section>
     </div>
   </template>
   
