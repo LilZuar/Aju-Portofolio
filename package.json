@@ -11,9 +11,14 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@nuxt/icon": "^2.0.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
-    "nuxt": "^3.14.1592",
+    "nuxt": "^4.1.0",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "^4.1.0",
+    "@nuxt/schema": "^4.1.0"
   }
 }

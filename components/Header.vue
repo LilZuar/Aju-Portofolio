@@ -3,7 +3,7 @@
       <a href="/" class="text-xl font-semibold" aria-label="Go to homepage">Azuar Portofolio</a>
       <nav class="flex gap-10 self-start text-lg leading-loose">
         <a href="/about/aboutMe" class="hover:underline">About</a>
-        <!-- <a href="#work" class="hover:underline">Work</a> -->
+        <a href="/work/work" class="hover:underline">Work</a>
         <a href="#contact" class="hover:underline">Contact</a>
       </nav>
     </header>

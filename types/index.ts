@@ -9,7 +9,9 @@ export interface ClientReview {
   export interface WorkItem {
     title: string;
     subtitle: string;
+    jobDesc: string;
     image: string;
+    glide: string;
     description: string;
   }
   

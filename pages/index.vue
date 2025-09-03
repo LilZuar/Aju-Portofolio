@@ -1,70 +1,79 @@
 <script setup lang="ts">
-// import Header from './components/Header.vue'
-// import Hero from './components/Hero.vue'
-// import ContactForm from './components/ContactForm.vue'
+import Header from '@/components/Header.vue'
+import Hero from '@/components/Hero.vue'
+import ContactForm from '@/components/ContactForm.vue'
 import data from '@/data/data'
 
-const workItems = data.workItems;
-const services = data.services;
-
+const workItems = data.workItems
+const services = data.services
 </script>
 
 <template>
-  <div class="flex flex-col">
-    <Header />
+  <div class="flex flex-col font-sans">
+    <!-- Header & Hero -->
     <Hero />
-    
+
     <!-- Services Section -->
-    <section class="flex flex-col justify-center items-center px-56 py-64 w-full text-center bg-white text-zinc-800 max-md:px-8 max-md:py-36 max-md:max-w-full">
-      <div class="flex flex-wrap gap-24 items-start max-md:max-w-full">
-        <div v-for="service in services" :key="service.title" class="flex flex-col items-center min-w-[280px] w-[320px]">
-          <img 
-            :src="'/images/' + service.icon" 
-            :alt="service.title" 
-            loading="lazy" 
-            class="object-contain max-w-full aspect-square w-[160px]" 
+    <section class="w-full bg-white text-zinc-800 py-24 px-6 md:px-16 lg:px-32">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold">Services</h2>
+        <p class="mt-4 text-lg text-zinc-600 max-w-2xl mx-auto">
+          I help businesses and individuals build impactful digital experiences.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-16">
+        <div
+          v-for="service in services"
+          :key="service.title"
+          class="flex flex-col items-center w-[280px] md:w-[320px] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            :src="'/images/' + service.icon"
+            :alt="service.title + ' icon'"
+            loading="lazy"
+            class="object-contain w-32 h-32 mb-8"
           />
-          <div class="flex flex-col items-center mt-14 w-full max-md:mt-10">
-            <h3 class="text-4xl font-semibold leading-loose">{{ service.title }}</h3>
-            <p class="mt-5 text-lg leading-7">{{ service.description }}</p>
-          </div>
+          <h3 class="text-2xl font-semibold mb-4">{{ service.title }}</h3>
+          <p class="text-base text-zinc-600">{{ service.description }}</p>
         </div>
       </div>
     </section>
 
-
     <!-- Work Section -->
-    <section id="work" class="flex flex-col items-center px-24 py-5 w-full bg-white text-zinc-800 max-md:px-5 max-md:max-w-full">
-      <h2 class="text-3xl font-semibold leading-none text-center mb-10">My Latest Work</h2>
-      <!-- Work items grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 w-full">
-        <NuxtLink 
-          v-for="work in workItems" 
-          :key="work.title" 
+    <section id="work" class="w-full bg-gray-50 text-zinc-800 py-24 px-6 md:px-16 lg:px-32">
+      <h2 class="text-4xl font-bold text-center mb-16">My Latest Work</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <NuxtLink
+          v-for="work in workItems"
+          :key="work.title"
           :to="`/work/${work.title.replace(/\s+/g, '-').toLowerCase()}`"
-          class="flex flex-col items-center"
+          class="flex flex-col bg-white rounded-xl shadow-md hover:shadow-xl overflow-hidden transition duration-300"
         >
-          <img :src="'/images/' + work.image" :alt="work.title" class="w-[450px] h-[150px] object-cover mb-4 rounded-lg shadow-md" />
-          <h3 class="text-xl font-semibold">{{ work.title }}</h3>
-          <p class="text-lg text-zinc-600">{{ work.subtitle }}</p>
+          <img
+            :src="'/images/' + work.image"
+            :alt="work.title"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">{{ work.title }}</h3>
+            <p class="text-zinc-600">{{ work.subtitle }}</p>
+          </div>
         </NuxtLink>
       </div>
     </section>
 
-
-
-
-
     <!-- Contact Section -->
-    <section id="contact" class="flex flex-col items-center px-24 mt-20 pb-16 w-full bg-white max-md:px-5 max-md:max-w-full">
-      <div class="flex flex-col items-center pt-16 border-t-2 border-black border-opacity-20 max-md:max-w-full">
-        <div class="flex flex-wrap gap-10 items-start max-md:max-w-full">
-          <div class="flex flex-col min-w-[240px] w-[360px]">
-            <h2 class="text-3xl font-semibold leading-none text-zinc-800">Let's work together</h2>
-            <p class="mt-10 text-lg leading-7 text-zinc-800">
-              Hopefully we could work together in the future. If you have any question or want to discuss about project, feel free to contact me.
-            </p>
-          </div>
+    <section id="contact" class="w-full bg-white py-24 px-6 md:px-16 lg:px-32">
+      <div class="max-w-5xl mx-auto border-t border-zinc-200 pt-16 flex flex-col lg:flex-row gap-12">
+        <div class="flex-1">
+          <h2 class="text-4xl font-bold text-zinc-800">Let's work together</h2>
+          <p class="mt-6 text-lg text-zinc-600 leading-relaxed">
+            I’d love to collaborate on your next project. If you have questions or ideas,
+            feel free to reach out through the form.
+          </p>
+        </div>
+        <div class="flex-1">
           <ContactForm />
         </div>
       </div>

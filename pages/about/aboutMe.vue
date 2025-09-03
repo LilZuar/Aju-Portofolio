@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <section
     class="flex flex-col items-center justify-center mb-24 px-24 py-10 w-full bg-gray-50 text-zinc-800 max-md:px-5"
   >
