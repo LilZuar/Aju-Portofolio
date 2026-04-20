@@ -13,6 +13,7 @@ export interface ClientReview {
     image: string;
     glide: string;
     description: string;
+    previews?: string[];
   }
   
   export interface ServiceItem {

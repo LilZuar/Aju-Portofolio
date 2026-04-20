@@ -3,6 +3,15 @@ import type { WorkItem, ServiceItem } from '../types';
 // Work Items
 export const workItems: WorkItem[] = [
   {
+    title: 'Sales Order Retail',
+    subtitle: 'iOS app for managing retail sales orders at Balitower.',
+    jobDesc: 'As an iOS Developer on the Sales Order Retail project, I delivered 5+ iOS features using SwiftUI and Clean Architecture, improving modularity and reducing feature integration time. I implemented Core Data and Combine to enhance data handling efficiency and app responsiveness, and integrated 10+ REST APIs using Moya to build a scalable and maintainable networking layer. I also implemented push notification features to boost user engagement and real-time communication, and managed app distribution across enterprise environments for both public release and internal deployment. To streamline the delivery process, I automated the build and release pipeline using Fastlane and Firebase App Distribution, reducing manual effort and accelerating testing cycles. Throughout the project, I collaborated closely with cross-functional teams via Git workflows, consistently delivering user-focused features in an agile environment.',
+    image: 'SOR.png',
+    glide: 'sor-glide.png',
+    description: 'Sales Order Retail (SOR) is a feature within the Balitower iOS app that enables field sales representatives to manage retail sales orders digitally. The app streamlines the order creation and tracking process, reducing manual paperwork and improving accuracy in the sales pipeline. Built with SwiftUI and Clean Architecture, the feature integrates seamlessly with the backend through REST APIs to provide real-time order data and status updates.',
+    previews: ['sor1.png', 'sor2.png', 'sor3.png'],
+  },
+  {
     title: "Check Mate",
     subtitle: "iOS app for daily reminder",
     jobDesc: "As a Project Manager, I helped lead the team in building Check Mate — from planning and managing the project to jumping into development when needed. It was my first time stepping into a PM role, and I even got the chance to pitch the app to an Apple staff member from Singapore, which was an exciting experience for me.",
@@ -64,6 +73,7 @@ export const workItems: WorkItem[] = [
     glide: "boxing-glide.png",
     description:
       "Developing an augmented reality (AR) game for iOS using ARKit, RealityKit, and the Vision framework, with a focus on utilizing the front camera for immersive user experiences. The game leverages hand position detection and AR technologies to create an engaging and interactive gameplay environment. Additionally, it references the project that i made called BOXing as a practical example. Augmented Reality (AR) has transformed the way users interact with digital content, providing immersive experiences by blending the virtual world with the real one. Apple’s ARKit and RealityKit frameworks offer powerful tools for creating AR experiences on iOS devices. When combined with the Vision framework, which provides robust hand position detection capabilities, developers can create unique AR applications that use the front camera to enhance interactivity. This publication includes a case study of the BOXing project, an AR game utilizing these technologies.",
+    previews: ['boxing1.PNG', 'boxing2.PNG', 'boxing3.PNG', 'boxing4.PNG'],
   },
 ];
 

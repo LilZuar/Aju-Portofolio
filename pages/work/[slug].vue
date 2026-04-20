@@ -54,18 +54,23 @@
     </section>
 
     <!-- Preview Section -->
-    <!-- <section class="px-6 md:px-16 lg:px-32 py-12 border-t">
-      <h2 class="text-2xl font-semibold text-zinc-800 mb-4">Preview</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img
-          v-for="(img, index) in work.preview"
+    <section v-if="work.previews && work.previews.length > 0" class="px-6 md:px-16 lg:px-32 py-12 border-t border-slate-100">
+      <h2 class="text-2xl font-semibold text-slate-800 mb-8">Screenshots</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        <div
+          v-for="(img, index) in work.previews"
           :key="index"
-          :src="'/images/' + img"
-          alt="Preview image"
-          class="rounded-xl shadow-md object-contain w-full bg-white p-2"
-        />
+          class="rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-slate-100 bg-slate-50 p-2 flex items-center justify-center"
+        >
+          <img
+            :src="'/images/' + img"
+            alt="Preview screenshot"
+            loading="lazy"
+            class="max-h-[400px] w-auto object-contain rounded-xl"
+          />
+        </div>
       </div>
-    </section> -->
+    </section>
   </section>
 
   <!-- Fallback if work is not found -->
@@ -106,7 +111,7 @@ const { data: work, error } = await useAsyncData('work', () => {
       glide: '',
       description: '',
       jobDesc: [],
-      preview: []
+      previews: []
     }
   )
 })

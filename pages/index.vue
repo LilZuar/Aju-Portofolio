@@ -14,10 +14,10 @@ const services = data.services
     <Hero />
 
     <!-- Services Section -->
-    <section class="w-full bg-white text-zinc-800 py-24 px-6 md:px-16 lg:px-32">
+    <section class="w-full bg-white text-slate-800 py-24 px-6 md:px-16 lg:px-32">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold">Services</h2>
-        <p class="mt-4 text-lg text-zinc-600 max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">Services</h2>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
           I help businesses and individuals build impactful digital experiences.
         </p>
       </div>
@@ -26,38 +26,42 @@ const services = data.services
         <div
           v-for="service in services"
           :key="service.title"
-          class="flex flex-col items-center w-[280px] md:w-[320px] p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
+          class="flex flex-col items-center w-[280px] md:w-[320px] p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
         >
-          <img
-            :src="'/images/' + service.icon"
-            :alt="service.title + ' icon'"
-            loading="lazy"
-            class="object-contain w-32 h-32 mb-8"
-          />
-          <h3 class="text-2xl font-semibold mb-4">{{ service.title }}</h3>
-          <p class="text-base text-zinc-600">{{ service.description }}</p>
+          <div class="p-4 bg-indigo-50/50 rounded-2xl mb-8 group-hover:scale-110 transition-transform duration-300">
+            <img
+              :src="'/images/' + service.icon"
+              :alt="service.title + ' icon'"
+              loading="lazy"
+              class="object-contain w-24 h-24"
+            />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-4">{{ service.title }}</h3>
+          <p class="text-base text-slate-600 text-center leading-relaxed">{{ service.description }}</p>
         </div>
       </div>
     </section>
 
     <!-- Work Section -->
-    <section id="work" class="w-full bg-gray-50 text-zinc-800 py-24 px-6 md:px-16 lg:px-32">
-      <h2 class="text-4xl font-bold text-center mb-16">My Latest Work</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+    <section id="work" class="w-full bg-slate-50 text-slate-800 py-24 px-6 md:px-16 lg:px-32">
+      <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">My Latest Work</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
         <NuxtLink
           v-for="work in workItems.slice(0, 3)"
           :key="work.title"
           :to="`/work/${work.title.replace(/\s+/g, '-').toLowerCase()}`"
-          class="flex flex-col bg-white rounded-xl shadow-md hover:shadow-xl overflow-hidden transition duration-300"
+          class="group flex flex-col bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 overflow-hidden transition-all duration-300"
         >
-          <img
-            :src="'/images/' + work.image"
-            :alt="work.title"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">{{ work.title }}</h3>
-            <p class="text-zinc-600">{{ work.subtitle }}</p>
+          <div class="overflow-hidden">
+            <img
+              :src="'/images/' + work.image"
+              :alt="work.title"
+              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-indigo-600 transition-colors">{{ work.title }}</h3>
+            <p class="text-slate-600 leading-relaxed">{{ work.subtitle }}</p>
           </div>
         </NuxtLink>
       </div>
@@ -65,10 +69,10 @@ const services = data.services
 
     <!-- Contact Section -->
     <section id="contact" class="w-full bg-white py-24 px-6 md:px-16 lg:px-32">
-      <div class="max-w-5xl mx-auto border-t border-zinc-200 pt-16 flex flex-col lg:flex-row gap-12">
+      <div class="max-w-6xl mx-auto border-t border-slate-200 pt-20 flex flex-col lg:flex-row gap-16">
         <div class="flex-1">
-          <h2 class="text-4xl font-bold text-zinc-800">Let's work together</h2>
-          <p class="mt-6 text-lg text-zinc-600 leading-relaxed">
+          <h2 class="text-5xl font-bold text-slate-800 tracking-tight">Let's work <br/> <span class="text-indigo-600">together</span></h2>
+          <p class="mt-8 text-xl text-slate-600 leading-relaxed max-w-md">
             I’d love to collaborate on your next project. If you have questions or ideas,
             feel free to reach out through the form.
           </p>

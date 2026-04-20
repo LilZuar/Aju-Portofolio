@@ -29,14 +29,14 @@ const handleSubmit = async (e: Event) => {
 </script>
 
 <template>
-  <form @submit="handleSubmit" class="flex flex-col min-w-[240px] w-[530px] max-md:max-w-full">
-    <div class="flex flex-col w-full text-lg leading-loose max-w-[530px] text-zinc-800 max-md:max-w-full">
+  <form @submit="handleSubmit" class="flex flex-col min-w-[240px] w-full lg:w-[530px] max-md:max-w-full">
+    <div class="flex flex-col w-full text-lg leading-loose max-w-[530px] text-slate-800 max-md:max-w-full gap-5">
       <label for="name" class="sr-only">Name</label>
       <input
         id="name"
         type="text"
         v-model="form.name"
-        class="flex-1 shrink gap-2.5 px-8 py-5 w-full whitespace-nowrap bg-zinc-100 max-md:px-5 max-md:max-w-full"
+        class="w-full px-8 py-5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-400"
         placeholder="Name"
         required
       />
@@ -46,7 +46,7 @@ const handleSubmit = async (e: Event) => {
         id="email"
         type="email"
         v-model="form.email"
-        class="flex-1 shrink gap-2.5 px-8 py-5 mt-5 w-full whitespace-nowrap bg-zinc-100 max-md:px-5 max-md:max-w-full"
+        class="w-full px-8 py-5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-400"
         placeholder="Email"
         required
       />
@@ -55,7 +55,7 @@ const handleSubmit = async (e: Event) => {
       <textarea
         id="message"
         v-model="form.message"
-        class="flex-1 shrink gap-2.5 px-8 py-5 mt-5 w-full h-[200px] leading-7 bg-zinc-100 max-md:px-5 max-md:max-w-full"
+        class="w-full h-[200px] px-8 py-5 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all leading-7 placeholder:text-slate-400 resize-none"
         placeholder="Type your message here"
         required
       ></textarea>
@@ -63,9 +63,9 @@ const handleSubmit = async (e: Event) => {
     
     <button
       type="submit"
-      class="gap-2.5 self-start px-20 py-6 mt-10 text-xl font-semibold text-center text-white whitespace-nowrap bg-zinc-800 max-md:px-5 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+      class="mt-8 px-12 py-5 w-fit text-lg font-semibold text-white bg-indigo-600 rounded-full shadow-lg shadow-indigo-200/50 hover:bg-indigo-700 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-200/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
     >
-      Submit
+      Send Message
     </button>
   </form>
 </template>
