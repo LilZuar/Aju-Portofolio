@@ -1,5 +1,13 @@
 import type { WorkItem, ServiceItem } from '../types';
 
+// Profile (used for the generated portfolio PDF)
+export const profile = {
+  name: 'Lazuardhi Imani Ahfar',
+  role: 'Software Engineer | Mobile Programmer',
+  summary:
+    'Mobile Developer specializing in iOS (SwiftUI) with experience building scalable applications and intelligent features such as face recognition. Skilled in Clean Architecture, API integration, and performance optimization, with a strong focus on delivering reliable and user-focused mobile experiences.',
+};
+
 // Work Items
 export const workItems: WorkItem[] = [
   {
@@ -101,6 +109,7 @@ export const services: ServiceItem[] = [
 
 
 export default {
+  profile,
   workItems,
   services,
 };

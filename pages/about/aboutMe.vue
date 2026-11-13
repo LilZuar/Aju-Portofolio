@@ -15,6 +15,15 @@
           <Icon name="mdi:download" class="text-2xl" />
           Download Full CV
         </a>
+        <button
+          type="button"
+          :disabled="generating"
+          @click="downloadPortfolio"
+          class="inline-flex items-center justify-center gap-3 mt-10 ml-0 sm:ml-4 px-8 py-4 bg-white text-indigo-600 text-lg font-semibold rounded-full border border-indigo-200 shadow-lg shadow-indigo-100/50 hover:bg-indigo-50 hover:-translate-y-1 transition-all duration-300 disabled:opacity-60 disabled:cursor-wait disabled:hover:translate-y-0"
+        >
+          <Icon :name="generating ? 'mdi:loading' : 'mdi:file-pdf-box'" :class="['text-2xl', { 'animate-spin': generating }]" />
+          {{ generating ? 'Generating PDF...' : 'Download Portfolio' }}
+        </button>
       </div>
     </section>
 
@@ -245,3 +254,9 @@
     </section>
   </div>
 </template>
+
+<script setup lang="ts">
+import { usePortfolioPdf } from '@/composables/usePortfolioPdf'
+
+const { generating, downloadPortfolio } = usePortfolioPdf()
+</script>
