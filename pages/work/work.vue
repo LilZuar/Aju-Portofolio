@@ -2,7 +2,19 @@
     <div class="min-h-screen flex flex-col bg-zinc-50 text-zinc-800">
       <!-- Work Section -->
       <main class="flex-1 px-6 md:px-16 lg:px-32 py-16">
-        <h1 class="text-4xl font-bold text-center mb-12">My Work</h1>
+        <h1 class="text-4xl font-bold text-center mb-6">My Work</h1>
+
+        <div class="flex justify-center mb-12">
+          <button
+            type="button"
+            :disabled="generating"
+            @click="downloadPortfolio"
+            class="inline-flex items-center gap-3 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg shadow-indigo-200/50 hover:bg-indigo-700 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-wait disabled:hover:translate-y-0"
+          >
+            <Icon :name="generating ? 'mdi:loading' : 'mdi:file-pdf-box'" :class="['text-2xl', { 'animate-spin': generating }]" />
+            {{ generating ? 'Generating PDF...' : 'Download Portfolio (PDF)' }}
+          </button>
+        </div>
   
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
@@ -49,6 +61,9 @@
   
   <script setup>
   import data from '@/data/data'
+  import { usePortfolioPdf } from '@/composables/usePortfolioPdf'
+
+  const { generating, downloadPortfolio } = usePortfolioPdf()
   
   // ambil data work dari file data.js
   const workItems = data.workItems
